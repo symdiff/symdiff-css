@@ -31,6 +31,13 @@ describe('symdiff-css', function() {
         expect(result.length).to.equal(0);
     });
 
+    it('should not contain duplicates', function() {
+        var testCSS = '.grid { flex: 0 0 auto; } .grid { color: red; }',
+            result = extract(testCSS);
+
+        expect(result.length).to.equal(1);;
+    });
+
     it('should extract a class in a media query', function() {
         var testCSS = '@media(max-width: 100px) { .grid { display: flex; } }',
             result = extract(testCSS);

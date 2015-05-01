@@ -52,7 +52,11 @@ function symdiffCSS(cssString) {
             })
             // now flatten twice
             .reduce(flatten, [])
-            .reduce(flatten, []);
+            .reduce(flatten, [])
+            // and remove duplicates
+            .filter(function(c, i, all) {
+                return all.lastIndexOf(c) === i;
+            });
 }
 
 module.exports = symdiffCSS;
