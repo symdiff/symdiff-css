@@ -1,8 +1,16 @@
 {
   "name": "symdiff-css",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Extracts all classes from a CSS file.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/symdiff/symdiff-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/symdiff/symdiff-css/issues"
+  },
+  "homepage": "https://symdiff.github.io",
   "dependencies": {
     "css": "2.2.0"
   },
@@ -16,5 +24,5 @@
     "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "author": "Nikolaus Piccolotto <hello@npiccolotto.com>",
-  "license": "MIT"
+  "license": "Apache 2.0"
 }
